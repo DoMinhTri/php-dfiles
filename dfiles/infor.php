@@ -1,0 +1,10 @@
+<?php
+	//////////////////////////////////////// Tạo thư mục hệ thống
+	if($_Kieu == 1)
+	{
+		MkDirCheck(DF_IMAGE_PATH);
+		MkDirCheck(DF_THUMB_PATH);
+	}
+   ////////////////////////////////////////
+?>
+

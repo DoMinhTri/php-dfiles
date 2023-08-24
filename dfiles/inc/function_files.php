@@ -1,0 +1,24 @@
+<?php
+//////////////////////////////////////////////////////////////////////////////////
+function copyFile($sourcePath, $destinationPath) 
+{
+	if (!file_exists($sourcePath)) { return false; } // Kiểm tra xem tệp nguồn có tồn tại không
+	// Sao chép tệp
+	if (copy($sourcePath, $destinationPath)) { return true;	} else { return false;	}
+}
+//////////////////////////////////////////////////////////////////////////////////
+function LayFileType($filePath)
+{
+	$fileType = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
+	return $fileType;
+}
+//////////////////////////////////////////////////////////////////////////////////
+function LayFileName($filePath)
+{
+	$fileName = pathinfo($filePath, PATHINFO_FILENAME);
+	return $fileName;
+}
+//////////////////////////////////////////////////////////////////////////////////
+
+?>
+
